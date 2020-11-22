@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("ADODB.NET")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Written By Brian Coverstone - Copyright ©  2008")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

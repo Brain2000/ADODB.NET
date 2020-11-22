@@ -10,6 +10,11 @@ Imports System.Threading
 Imports System.Threading.Thread
 Imports System.Linq
 
+''' <summary>
+''' Written By Brian Coverstone - July 2008<br />
+''' <br />
+''' ADODB Connections/Recordsets/Commands with both client and server side cursors.
+''' </summary>
 Public Module ADODB
     'replacement for built in UBound guaranteed to never throw an error
     Private Function UBound(ByVal obj As System.Array, Optional Rank As Integer = 1) As Integer
