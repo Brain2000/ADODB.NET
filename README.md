@@ -10,6 +10,8 @@ There are a number of things that this rendition does not fully support, such as
 Quite a bit of this has been tested against the COM ADODB version, and it even mirrors a lot of the errors verbatim, and the circumstances that they occur under.
 It was designed to be a drop-in replacement for COM ADODB with minimal changes.
 
+Server side cursors were reverse engineered into their internal stored procedures that they call. Server side cursors are stil one of the safest ways to run a single update against a database without worry of accidentally updating other rows because of a malformed WHERE clause that updated too many items. If you try to run updates using this via a client side record, it will work, but I believe ADO.NET will throw errors unless you have selected all primary key fields.
+
 
 # Example:
 ```
