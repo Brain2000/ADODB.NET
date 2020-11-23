@@ -5,6 +5,8 @@ So why not just use the built in ADODB COM object? It crashes from time to time 
 
 This version is rock solid.  Note: it doesn't mean this is thread safe where you can pass instances between threads and call the functions simultaneously, as the underlying ADO.NET is also not thread safe in this fashion. You can have 1000 threads creating their own instances simultaneously and there will not be any crashing. Or a thread can hand an instance to another thread, so long as the original thread does not call any functions simultaneously with the secondary thread!
 
+There are a number of things that this rendition does not fully support, such as batch optimistic (actually, I'm not even sure what that does).
+
 # Example:
 ```
 using (var DB = new ADODB.Connection())
