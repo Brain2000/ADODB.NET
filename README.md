@@ -7,6 +7,10 @@ This version is rock solid.  Note: it doesn't mean this is thread safe where you
 
 There are a number of things that this rendition does not fully support, such as batch optimistic (actually, I'm not even sure what that does).
 
+Quite a bit of this has been tested against the COM ADODB version, and it even mirrors a lot of the errors verbatim, and the circumstances that they occur under.
+It was designed to be a drop-in replacement for COM ADODB with minimal changes.
+
+
 # Example:
 ```
 using (var DB = new ADODB.Connection())
