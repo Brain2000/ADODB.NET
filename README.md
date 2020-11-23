@@ -46,8 +46,8 @@ using (var DB = new ADODB.Connection())
         //once you override CursorLocation on a Recordset, it will no longer inherit from the Connection object
         DYN.Open("SELECT * FROM User WHERE 0=1", DB, CursorTypeEnum.adOpenDynamic, LockTypeEnum.adLockOptimistic);
         DYN.AddNew();
-        DYN["User_Id"] = 1234L;
-        DYN["UserName"] = "Fred";
+        DYN["User_Id"].Value = 1234L;
+        DYN["UserName"].Value = "Fred";
         DYN.Update();
         DYN.Close();
     }
