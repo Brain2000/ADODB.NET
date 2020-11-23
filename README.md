@@ -12,6 +12,8 @@ It was designed to be a drop-in replacement for COM ADODB with minimal changes.
 
 Server side cursors were reverse engineered into their internal stored procedures that they call. They are still one of the safest ways to run a single update against a database without worry of accidentally updating other rows because of a malformed WHERE clause that matches too many items. If you try to run Updates via a client side recordset, it will work, but I believe ADO.NET will throw errors unless you have also selected all primary key fields.
 
+There are also some enhancements in this code, such as the "Recordset.updatedFields" property, which is a dictionary that keeps track of fields that have been updated. It's also smart enough to know if you update a field and set it to the same value that is already set. This in turn is used when running updates, as it it optimized and will only update fields that have actually changed.
+
 
 # Example:
 ```
